@@ -19,8 +19,8 @@ pub struct CandleRawMySbContract {
     pub l: f64,
     #[prost(double, tag = "7")]
     pub v: f64,
-    #[prost(double, tag = "8")]
-    pub src: f64,
+    #[prost(string, tag = "8")]
+    pub src: String,
 }
 
 impl service_sdk::rust_extensions::sorted_vec::EntityWithStrKey for CandleRawMySbContract {
