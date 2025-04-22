@@ -1,7 +1,5 @@
 use serde::{Deserialize, Serialize};
 
-pub const POLYGON_ID: u32 = 0;
-
 service_sdk::macros::use_my_sb_entity_protobuf_model!();
 #[derive(Clone, PartialEq, ::prost::Message)]
 #[my_sb_entity_protobuf_model(topic_id = "candles-raw")]
@@ -23,6 +21,10 @@ pub struct CandleRawMySbContract {
     pub v: f64,
     #[prost(fixed32, tag = "8")]
     pub src: u32,
+}
+
+impl CandleRawMySbContract {
+    pub const SRC_POLYGON: u32 = 0;
 }
 
 impl service_sdk::rust_extensions::sorted_vec::EntityWithStrKey for CandleRawMySbContract {
