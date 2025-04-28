@@ -25,6 +25,7 @@ pub struct CandleRawMySbContract {
 
 impl CandleRawMySbContract {
     pub const SRC_POLYGON: u32 = 0;
+    pub const SRC_BINANCE: u32 = 1;
 }
 
 impl service_sdk::rust_extensions::sorted_vec::EntityWithStrKey for CandleRawMySbContract {
